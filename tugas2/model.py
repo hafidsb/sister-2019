@@ -22,11 +22,6 @@ class ServiceModel(object):
         data = b"x" * size
         return data
 
-    def read_file(self, file_name):
-        f = open(file_name, 'rb')
-        print(f.read())
-        print("hehe")
-
     def create_file(self, file_name):
         path = "file_storage/%d" % self.lucky_number
         try:
@@ -37,6 +32,14 @@ class ServiceModel(object):
         # f.write("Test from %d" % self.lucky_number)
         f.close()
         return "File %s has been created successfully" % file_name
+
+    def read_file(self, file_name):
+        path = "file_storage/%d/%s" % (self.lucky_number, file_name)
+        f = open(path, 'r')
+        return f.read()
+
+    def edit_file(self, file_name):
+        pass
 
     def list_file(self):
         path = "file_storage/%d" % self.lucky_number

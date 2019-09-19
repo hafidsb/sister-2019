@@ -15,9 +15,11 @@ def menu():
     print("List of available services(with keyword for using it):")
     print("1. Create a text file on your current lucky number folder(file_create <filename>)")
     print("2. Print contents of your current lucky number storage(file_list)")
-    print("3. Delete a text file on your current lucky number folder(file_delete <filename>)")
-    print("4. Change your lucky number(ln_change <number>)")
-    print("4. Print your current lucky number(ln_print)")
+    print("3. Print content of selected file(file_read <filename>")
+    print("4. Edit content of selected file(file_edit <filename>")
+    print("5. Delete a text file on your current lucky number folder(file_delete <filename>)")
+    print("6. Change your lucky number(ln_change <number>)")
+    print("7. Print your current lucky number(ln_print)")
     print("8. Print services list(help)")
     print("9. Exit program(exit)")
 
@@ -57,6 +59,8 @@ if __name__ == '__main__':
         if len(user_request.split()) > 1:
             if user_request.split()[0] == 'file_create':
                 print(s.create_file(" ".join(user_request.split()[1:]) + ".txt"))
+            elif user_request.split()[0] == 'file_read':
+                print("\"" + s.read_file(" ".join(user_request.split()[1:]) + ".txt") + "\"")
             elif user_request.split()[0] == 'file_delete':
                 print(s.delete_file(" ".join(user_request.split()[1:]) + ".txt"))
             elif user_request.split()[0] == 'ln_change':
@@ -79,5 +83,3 @@ if __name__ == '__main__':
             print("Good bye!")
         else:
             print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
-
-    # s.create_file("funny.txt")
