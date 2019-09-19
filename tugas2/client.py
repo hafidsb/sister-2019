@@ -4,10 +4,10 @@ import threading
 import serpent
 
 
-def connect():
+def connect(name):
     uri = "PYRONAME:myserver@localhost:7777"
     server = Pyro4.Proxy(uri)
-    print(server.get_greet("myself"))
+    print(server.get_start(name))
     return server, uri
 
 
@@ -24,43 +24,42 @@ def menu():
     print("9. Exit program(exit)")
 
 
-def regular_pyro(uri):
-    blobsize = 10 * 1024 * 1024
-    num_blobs = 10
-    total_size = 0
-    start = time.time()
-    name = threading.currentThread().name
-    with Pyro4.core.Proxy(uri) as p:
-        for _ in range(num_blobs):
-            print("thread {0} getting a blob using regular Pyro call...".format(name))
-            data = p.get_file(blobsize)
-            data = serpent.tobytes(data)  # in case of serpent encoded bytes
-            total_size += len(data)
-    assert total_size == blobsize * num_blobs
-    duration = time.time() - start
-    print("thread {0} done, {1:.2f} Mb/sec.".format(name, total_size / 1024.0 / 1024.0 / duration))
-
-
 if __name__ == '__main__':
-    # print("\n\n**** regular pyro calls ****\n")
-    # t1 = threading.Thread(target=regular_pyro, args=(u,))
-    # t2 = threading.Thread(target=regular_pyro, args=(u,))
-    # t1.start()
-    # t2.start()
-    # t1.join()
-    # t2.join()
-    # input("enter to exit:")
-
-    s, u = connect()
+    name = input(">> input name: ")
+    s, u = connect(name)
     is_connected = True
     menu()
     while is_connected:
-        user_request = input("\n>> ").lower()
+        user_request = input("\n>> input: ").lower()
         if len(user_request.split()) > 1:
             if user_request.split()[0] == 'file_create':
                 print(s.create_file(" ".join(user_request.split()[1:]) + ".txt"))
             elif user_request.split()[0] == 'file_read':
-                print("\"" + s.read_file(" ".join(user_request.split()[1:]) + ".txt") + "\"")
+                read = s.read_file(" ".join(user_request.split()[1:]) + ".txt")
+                if read == False:
+                    print("File " + " ".join(user_request.split()[1:]) + ".txt not found")
+                else:
+                    print("\"" + read + "\"")
+            elif user_request.split()[0] == 'file_edit':
+                edit = s.read_file(" ".join(user_request.split()[1:]) + ".txt")
+                if edit == False:
+                    print("File " + " ".join(user_request.split()[1:]) + ".txt not found")
+                    continue
+                else:
+                    print("Current file content: \"" + edit + "\"")
+                change_mode = input("Content change(choose): \n 1. Append file\n 2. Rewrite file entirely\n\n>> choice:")
+                if change_mode == '1':
+                    mode = 'a'
+                    change_content = input(">> content append: ")
+                elif change_mode == '2':
+                    mode = 'w'
+                    change_content = input(">> content overwrite: ")
+                else:
+                    print("Change mode invalid")
+                    continue
+                if edit == "":
+                    mode = 'w'
+                print("New file content: \"" + s.edit_file(" ".join(user_request.split()[1:]) + ".txt", change_content, mode) + "\"")
             elif user_request.split()[0] == 'file_delete':
                 print(s.delete_file(" ".join(user_request.split()[1:]) + ".txt"))
             elif user_request.split()[0] == 'ln_change':
@@ -74,12 +73,15 @@ if __name__ == '__main__':
             print(s.get_lucky_number())
         elif user_request == 'file_list':
             temp_contents = s.list_file()
+            if temp_contents == []:
+                print("Folder empty")
+                continue
             for file_name in temp_contents:
                 print("- {}".format(file_name))
         elif user_request == 'help':
             menu()
         elif user_request == 'exit':
             is_connected = False
-            print("Good bye!")
+            print("Good bye " + name + "!")
         else:
             print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")

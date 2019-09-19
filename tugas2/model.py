@@ -13,14 +13,9 @@ class ServiceModel(object):
     def get_lucky_number(self):
         return self.lucky_number
 
-    def get_greet(self, name="<empty>"):
+    def get_start(self, name="<empty>"):
         self.lucky_number = random.randint(1, 1000)
-        return "Hello {}! Your lucky number is {}\n".format(name, self.lucky_number)
-
-    def get_file(self, size):
-        print("sending %d bytes" % size)
-        data = b"x" * size
-        return data
+        return "\nHello {}! Your lucky number is {}".format(name, self.lucky_number)
 
     def create_file(self, file_name):
         path = "file_storage/%d" % self.lucky_number
@@ -29,17 +24,29 @@ class ServiceModel(object):
         except FileExistsError:
             pass
         f = open(path + '/' + file_name, 'w')
-        # f.write("Test from %d" % self.lucky_number)
         f.close()
         return "File %s has been created successfully" % file_name
 
     def read_file(self, file_name):
         path = "file_storage/%d/%s" % (self.lucky_number, file_name)
-        f = open(path, 'r')
+        try:
+            f = open(path, 'r')
+        except FileNotFoundError:
+            return False
         return f.read()
 
-    def edit_file(self, file_name):
-        pass
+    def edit_file(self, file_name, content, mode):
+        path = "file_storage/%d/%s" % (self.lucky_number, file_name)
+        try:
+            f = open(path, mode)
+            if mode == 'a':
+                f.write(" " + content)
+            elif mode == 'w':
+                f.write(content)
+            f.close()
+        except FileNotFoundError:
+            False
+        return self.read_file(file_name)
 
     def list_file(self):
         path = "file_storage/%d" % self.lucky_number
@@ -47,7 +54,6 @@ class ServiceModel(object):
             os.makedirs(path)
         except FileExistsError:
             pass
-
         return os.listdir(path)
 
     def delete_file(self, file_name):
@@ -56,7 +62,7 @@ class ServiceModel(object):
             os.remove(path)
             return "File %s has been deleted successfully" % file_name
         except FileNotFoundError:
-            return "File %s not found." % file_name
+            return "File %s is not found." % file_name
 
 
 if __name__ == '__main__':
