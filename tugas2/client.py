@@ -5,7 +5,7 @@ import serpent
 
 
 def connect(name):
-    uri = "PYRONAME:myserver@10.151.30.145:7777"
+    uri = "PYRONAME:myserver@localhost:7777"
     server = Pyro4.Proxy(uri)
     print(server.connect(name))
     return server, uri

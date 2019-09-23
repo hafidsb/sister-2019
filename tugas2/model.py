@@ -44,7 +44,7 @@ class ServiceModel(object):
                 f.write(content)
             f.close()
         except FileNotFoundError:
-            False
+            return False
         return self.read_file(file_name)
 
     def list_file(self):
@@ -66,4 +66,4 @@ class ServiceModel(object):
 
 if __name__ == '__main__':
     k = ServiceModel()
-    print(k.get_greet("test from model"))
+    print(k.connect("test from model"))
