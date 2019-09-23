@@ -1,6 +1,5 @@
 import random
 import os
-import errno
 
 
 class ServiceModel(object):
@@ -13,7 +12,7 @@ class ServiceModel(object):
     def get_lucky_number(self):
         return self.lucky_number
 
-    def get_start(self, name="<empty>"):
+    def connect(self, name="<empty>"):
         self.lucky_number = random.randint(1, 1000)
         return "\nHello {}! Your lucky number is {}".format(name, self.lucky_number)
 

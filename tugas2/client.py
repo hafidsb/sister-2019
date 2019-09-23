@@ -5,9 +5,9 @@ import serpent
 
 
 def connect(name):
-    uri = "PYRONAME:myserver@localhost:7777"
+    uri = "PYRONAME:myserver@10.151.30.145:7777"
     server = Pyro4.Proxy(uri)
-    print(server.get_start(name))
+    print(server.connect(name))
     return server, uri
 
 
@@ -74,7 +74,7 @@ if __name__ == '__main__':
         elif user_request == 'file_list':
             temp_contents = s.list_file()
             if temp_contents == []:
-                print("Folder empty")
+                print("Folder is empty")
                 continue
             for file_name in temp_contents:
                 print("- {}".format(file_name))
