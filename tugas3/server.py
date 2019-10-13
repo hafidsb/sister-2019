@@ -1,4 +1,4 @@
-from tugas2.model import *
+from tugas3.model import *
 import Pyro4
 
 def start_server():
