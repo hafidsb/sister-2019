@@ -12,6 +12,7 @@ class PingThread(th.Thread):
         while True:
             try:
                 self.server.send_heartbeat()
+                # time.sleep(4.0)
             except Pyro4.errors.ConnectionClosedError:
                 print("\nMessage from thread: Disconnected from the server..\nConnection closed..")
                 break

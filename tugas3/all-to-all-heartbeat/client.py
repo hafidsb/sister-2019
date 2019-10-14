@@ -7,19 +7,29 @@ class PingThread(th.Thread):
     def __init__(self, server):
         th.Thread.__init__(self)
         self.server = server
+        self._stop_event = th.Event()
+
 
     def run(self):
-        while True:
+        while not self.stopped():
             try:
                 self.server.send_heartbeat()
+                # time.sleep(4.0)
             except Pyro4.errors.ConnectionClosedError:
-                print("\nMessage from thread: Disconnected from the server..\nConnection closed..")
-                break
+                print("\nMessage from thread: Disconnected from the server..\nClosing connection..")
+                return False
+
+    def stop(self):
+        self._stop_event.set()
+
+    def stopped(self):
+        return self._stop_event.is_set()
 
 
 def connect(name):
     uri = "PYRONAME:myserver@localhost:7777"
     server = Pyro4.Proxy(uri)
+    server._pyroTimeout = 3.0
     print(server.connect(name))
     return server, uri
 
@@ -42,7 +52,7 @@ if __name__ == '__main__':
     s, u = connect(name)
     is_connected = True
     thread = PingThread(s)
-    thread.start()
+    is_connected = thread.start()
     menu()
     while is_connected:
         try:
@@ -102,6 +112,13 @@ if __name__ == '__main__':
             else:
                 print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
 
-        except (Pyro4.errors.ConnectionClosedError, Pyro4.errors.CommunicationError):
+        except Pyro4.errors.TimeoutError:
+            print("SERVER TIMEOUT\nServer is presumably down..\nClosing connection..")
             is_connected = False
-            print("Disconnected from the server..\nServer might be down\nConnection closed..")
+            thread.stop()
+
+        except Pyro4.errors.CommunicationError:
+            print("Disconnected from the server..\nClosing connection..")
+            is_connected = False
+            thread.stop()
+

@@ -88,7 +88,7 @@ if __name__ == '__main__':
             else:
                 print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
         except (Pyro4.errors.TimeoutError, Pyro4.errors.ConnectionClosedError):
-            print("Server ded..")
+            print("Server is presumably down..\nClosing connection..")
             is_connected = False
         except KeyboardInterrupt:
             print("\nctrl-c huh?\nType exit next time")

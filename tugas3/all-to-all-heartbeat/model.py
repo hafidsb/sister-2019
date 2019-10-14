@@ -1,5 +1,6 @@
 import random
 import os
+import time
 
 
 class ServiceModel(object):
@@ -7,6 +8,7 @@ class ServiceModel(object):
         self.lucky_number = 1
 
     def set_lucky_number(self, number):
+        time.sleep(4.0)
         self.lucky_number = number
 
     def get_lucky_number(self):
