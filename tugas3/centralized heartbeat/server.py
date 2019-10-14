@@ -1,5 +1,11 @@
-from tugas2.model import *
+from model import ServiceModel
 import Pyro4
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("Pyro4").setLevel(logging.DEBUG)
+
+Pyro4.config.COMMTIMEOUT = 3.0
 
 def start_server():
     # name server harus di start dulu dengan  pyro4-ns -n localhost -p 7777

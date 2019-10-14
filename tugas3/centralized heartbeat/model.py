@@ -4,7 +4,7 @@ import os
 
 class ServiceModel(object):
     def __init__(self, lucky_number=None):
-        self.lucky_number = 0
+        self.lucky_number = 1
 
     def set_lucky_number(self, number):
         self.lucky_number = number
@@ -12,8 +12,11 @@ class ServiceModel(object):
     def get_lucky_number(self):
         return self.lucky_number
 
+    def send_heartbeat(self):
+        return "OK"
+
     def connect(self, name="<empty>"):
-        self.lucky_number = random.randint(1, 1000)
+        # self.lucky_number = random.randint(1, 1000)
         return "\nHello {}! Your lucky number is {}".format(name, self.lucky_number)
 
     def create_file(self, file_name):
