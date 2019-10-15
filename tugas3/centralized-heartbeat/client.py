@@ -1,21 +1,27 @@
 import Pyro4
 import time
 import threading as th
-import serpent
+
 
 class PingThread(th.Thread):
     def __init__(self, server):
         th.Thread.__init__(self)
         self.server = server
+        self.exception = None
 
     def run(self):
         while True:
             try:
                 self.server.send_heartbeat()
-                # time.sleep(4.0)
-            except Pyro4.errors.ConnectionClosedError:
-                print("\nMessage from thread: Disconnected from the server..\nConnection closed..")
+                time.sleep(3.0)
+                self.server.send_heartbeat()
+            except Pyro4.errors.ConnectionClosedError as e:
+                print("\nMessage from thread: Disconnected from the server..")
+                self.exception = e
                 break
+
+    def get_exception(self):
+        return self.exception
 
 
 def connect(name):
@@ -48,6 +54,8 @@ if __name__ == '__main__':
     while is_connected:
         try:
             user_request = input("\n>> input: ").lower()
+            if thread.get_exception():
+                raise thread.get_exception()
             if len(user_request.split()) > 1:
                 if user_request.split()[0] == 'file_create':
                     print(s.create_file(" ".join(user_request.split()[1:]) + ".txt"))
@@ -105,4 +113,4 @@ if __name__ == '__main__':
 
         except (Pyro4.errors.ConnectionClosedError, Pyro4.errors.CommunicationError):
             is_connected = False
-            print("Disconnected from the server..\nServer might be down\nConnection closed..")
+            print("Disconnected from the server..\nConnection closed..")

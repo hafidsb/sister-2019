@@ -1,8 +1,4 @@
-import Pyro4, Pyro4.errors
-import threading as th
-import time
-import serpent
-
+import Pyro4
 
 def connect(name):
     uri = "PYRONAME:myserver@localhost:7777"
