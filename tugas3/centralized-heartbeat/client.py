@@ -16,7 +16,7 @@ class PingThread(th.Thread):
                 time.sleep(3.0)
                 self.server.send_heartbeat()
             except Pyro4.errors.ConnectionClosedError as e:
-                print("\nMessage from thread: Disconnected from the server..")
+                print("\nMessage from thread: Disconnected from the server..\nPress Enter..")
                 self.exception = e
                 break
 
@@ -111,6 +111,6 @@ if __name__ == '__main__':
             else:
                 print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
 
-        except (Pyro4.errors.ConnectionClosedError, Pyro4.errors.CommunicationError):
+        except Pyro4.errors.CommunicationError:
             is_connected = False
             print("Disconnected from the server..\nConnection closed..")
