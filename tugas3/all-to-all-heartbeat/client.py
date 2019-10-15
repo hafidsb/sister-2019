@@ -12,17 +12,19 @@ class PingThread(th.Thread):
     def run(self):
         while not self.stopped():
             try:
-                self.server.send_heartbeat()
-                time.sleep(3.0)
-                self.server.send_heartbeat()
-            except Pyro4.errors.ConnectionClosedError:
+                self.server.get_lucky_number()
+                # self.server.send_heartbeat()
+                # time.sleep(3.0)
+                # self.server.send_heartbeat()
+            except Pyro4.errors.TimeoutError as e:
+                print("\nMessage from thread: Server timeout....\nPress Enter..")
+                self.exception = e
+                break
+            except Pyro4.errors.ConnectionClosedError as e:
                 print("\nMessage from thread: Disconnected from the server..\nPress Enter..")
                 self.exception = e
                 break
-            except Pyro4.errors.TimeoutError:
-                print("\nMessage from thread: Server is presumably down....\nPress Enter..")
-                self.exception = e
-                break
+
 
     def get_exception(self):
         return self.exception
@@ -66,6 +68,7 @@ if __name__ == '__main__':
         try:
             user_request = input("\n>> input: ").lower()
             if thread.get_exception():
+                # print(thread.get_exception())
                 raise thread.get_exception()
             if len(user_request.split()) > 1:
                 if user_request.split()[0] == 'file_create':
@@ -123,7 +126,7 @@ if __name__ == '__main__':
                 print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
 
         except Pyro4.errors.TimeoutError:
-            print("SERVER TIMEOUT\nServer is presumably down..\nConnection closed..")
+            print("Server timeout..\nConnection closed..")
             is_connected = False
             thread.stop()
 

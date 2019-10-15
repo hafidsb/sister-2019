@@ -83,8 +83,11 @@ if __name__ == '__main__':
                 print("Good bye " + name + "!")
             else:
                 print("Keyword not exist or wrong keyword usage. Enter 'help' for list of services")
-        except (Pyro4.errors.TimeoutError, Pyro4.errors.ConnectionClosedError):
-            print("SERVER TIMEOUT\nServer is presumably down..\nConnection closed..")
+        except Pyro4.errors.TimeoutError:
+            print("Server timeout..\nConnection closed..")
+            is_connected = False
+        except Pyro4.errors.ConnectionClosedError:
+            print("Disconnected from the server..\nConnection closed..")
             is_connected = False
         except KeyboardInterrupt:
             print("\nctrl-c huh?\nType exit next time")
