@@ -1,0 +1,850 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"te",
+				"text"
+			],
+			[
+				"t",
+				"trial_vector_cois"
+			],
+			[
+				"pop",
+				"population_list"
+			],
+			[
+				"pp",
+				"population_list"
+			],
+			[
+				"tri",
+				"trial_val"
+			],
+			[
+				"p",
+				"population"
+			],
+			[
+				"tria",
+				"trial_vector"
+			],
+			[
+				"donor",
+				"donor_vector"
+			],
+			[
+				"c",
+				"choice"
+			],
+			[
+				"dono",
+				"donor_vector"
+			],
+			[
+				"po",
+				"population_list"
+			],
+			[
+				"server",
+				"serverRunning"
+			],
+			[
+				"client",
+				"clientConnected"
+			],
+			[
+				"serve",
+				"serverDown"
+			],
+			[
+				"clien",
+				"clientConnected"
+			],
+			[
+				"amou",
+				"amount_received"
+			],
+			[
+				"amo",
+				"amount_expected"
+			],
+			[
+				"pla",
+				"plainText"
+			],
+			[
+				"dec",
+				"decrypt"
+			],
+			[
+				"clie",
+				"clients_conn"
+			],
+			[
+				"clients",
+				"clients_conn"
+			],
+			[
+				"cli",
+				"clients_conn"
+			],
+			[
+				"socket",
+				"client_socket"
+			],
+			[
+				"temp",
+				"tempat_lahir"
+			],
+			[
+				"req",
+				"required"
+			],
+			[
+				"user",
+				"UserController"
+			],
+			[
+				"Route",
+				"Route::post\tBasic Post Route."
+			],
+			[
+				"rapat",
+				"rapat_user"
+			],
+			[
+				"pesert",
+				"peserta_aktif"
+			],
+			[
+				"rapa",
+				"rapats"
+			],
+			[
+				"Auth",
+				"Auth::user\tGet the currently authenticated user."
+			],
+			[
+				"col-",
+				"col-4 \tBootstrap 4 Class"
+			],
+			[
+				"inp",
+				"custom-control-input \tBootstrap 4 Class"
+			],
+			[
+				"form",
+				"form-control \tBootstrap 4 Class"
+			],
+			[
+				"form-",
+				"form-control \tBootstrap 4 Class"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"back",
+				"background\tproperty"
+			],
+			[
+				"w_",
+				"w_bawah"
+			],
+			[
+				"right",
+				"right_new_skut"
+			],
+			[
+				"left",
+				"left_new_skut"
+			],
+			[
+				"ini",
+				"init_perm"
+			],
+			[
+				"i",
+				"init_perm"
+			],
+			[
+				"inde",
+				"index_gatel2"
+			],
+			[
+				"rigth",
+				"righties"
+			],
+			[
+				"lef",
+				"lefties"
+			],
+			[
+				"ri",
+				"righties"
+			],
+			[
+				"righ",
+				"right_bincode2"
+			],
+			[
+				"binc",
+				"bincode2"
+			],
+			[
+				"bin",
+				"bincode2"
+			],
+			[
+				"end",
+				"end_note"
+			],
+			[
+				"new",
+				"newVel"
+			],
+			[
+				"sum",
+				"sumthing"
+			],
+			[
+				"calcula",
+				"calculate_velocity"
+			],
+			[
+				"ne",
+				"newVx"
+			],
+			[
+				"initi",
+				"initialize_part"
+			],
+			[
+				"initialize_",
+				"initialize_veloc"
+			],
+			[
+				"out",
+				"output_vector"
+			],
+			[
+				"wei",
+				"weights_in_hid"
+			],
+			[
+				"hidd",
+				"hidden_errors"
+			],
+			[
+				"bi",
+				"bias"
+			],
+			[
+				"bis",
+				"bias_node"
+			],
+			[
+				"bias",
+				"bias_node"
+			],
+			[
+				"weight",
+				"weights_in_hid"
+			],
+			[
+				"input",
+				"input_vector"
+			],
+			[
+				"no_",
+				"no_of_out_nodes"
+			],
+			[
+				"weig",
+				"weights_in_hid"
+			],
+			[
+				"no",
+				"no_of_in_nodes"
+			],
+			[
+				"n",
+				"no_of_in_nodes"
+			],
+			[
+				"num_",
+				"num_of_input_nodes"
+			],
+			[
+				"num",
+				"num_of_input_nodes"
+			],
+			[
+				"tru",
+				"truncated_normal"
+			],
+			[
+				"nrp",
+				"nrp_lama"
+			],
+			[
+				"in",
+				"in_kosan"
+			],
+			[
+				"in_",
+				"in_nama"
+			],
+			[
+				"data",
+				"data_angkatan"
+			],
+			[
+				"quer",
+				"queryResult"
+			],
+			[
+				"route",
+				"routeDistance"
+			],
+			[
+				"gl",
+				"getUniformLocation"
+			],
+			[
+				"border",
+				"border\tproperty"
+			],
+			[
+				"rota",
+				"rotatedUniformLocation"
+			],
+			[
+				"u_",
+				"u_translation"
+			],
+			[
+				"get",
+				"getUniformLocation"
+			],
+			[
+				"S",
+				"STATIC_DRAW"
+			],
+			[
+				"A",
+				"ARRAY_BUFFER"
+			],
+			[
+				"buffer",
+				"bufferData"
+			],
+			[
+				"draw",
+				"drawScene"
+			],
+			[
+				"tra",
+				"translation"
+			],
+			[
+				"set",
+				"setRectangle"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client.py",
+			"settings":
+			{
+				"buffer_size": 864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server.py",
+			"settings":
+			{
+				"buffer_size": 1022,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test.sublime-project",
+			"settings":
+			{
+				"buffer_size": 211,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"men",
+				"View: Toggle Menu"
+			],
+			[
+				"package c",
+				"Package Control: List Packages"
+			],
+			[
+				"install package co",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimerepl:pyth",
+				"SublimeREPL: Python"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/5116100030/kuliah/Sister/sister-2019",
+		"/E/5116100030/kuliah/Sister/sister-2019/tugas4",
+		"/E/5116100030/kuliah/Sister/sister-2019/tugas4/c1"
+	],
+	"file_history":
+	[
+		"/E/5116100030/kuliah/Sister/sister-2019/tugas4/test.py",
+		"/E/5116100030/kuliah/Sister/sister-2019/tugas2/server.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python/Main.sublime-menu",
+		"/E/5116100030/kuliah/Sister/sister-2019/g",
+		"/E/5116100030/kuliah/Sister/sister-2019/test.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python3/Main.sublime-menu",
+		"/E/5116100030/kuliah/Sister/sister-2019-master/tugas2/client.py",
+		"/E/5116100030/kuliah/Sister/sister-2019-master/tugas2/test.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/Python3.sublime-build",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/E/5116100030/kuliah/PMPL/spring-testing-master/.env",
+		"/E/5116100030/kuliah/PMPL/spring-testing-master/startDatabase.sh",
+		"/C/Users/Honeycomb/Desktop/PENTING/data_siswa_pin3.csv",
+		"/C/Users/Honeycomb/Desktop/PENTING/perhitungan.py",
+		"/E/irham punya/secure-gate-system-test/api.js",
+		"/E/irham punya/secure-gate-system-test/pbkkh_securegate.sql",
+		"/E/irham punya/secure-gate-system-test/routes.js",
+		"/E/irham punya/secure-gate-system-test/conn.js",
+		"/E/irham punya/secure-gate-system-test/controller.js",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/python_new.sublime-build",
+		"/C/Users/Honeycomb/AppData/Roaming/Python/Python27/site-packages/pylint/test/regrtest_data/.pylintrc",
+		"/E/5116100030/kuliah/PBKK/Spring Projects/FP_PBKK_A/.classpath",
+		"/E/5116100030/kuliah/PBKK/Spring Projects/FP_PBKK_A/_others/Sql script/piknikyuk_base.sql",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/python3_new.sublime-build",
+		"/C/Users/Honeycomb/Downloads/piknikyuk.sql",
+		"/E/5116100030/kuliah/PBKK/Spring Projects/FP_PBKK_A/zz_not_web_app/Sql script/piknikyuk_base.sql",
+		"/E/5116100030/kuliah/Progjar/progjar/test.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL.sublime-settings",
+		"/E/5116100030/kuliah/Progjar/progjar/tugas 2/udp-file-server.py",
+		"/E/5116100030/kuliah/Progjar/progjar/tugas 2/udp-file-client.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL-Python3.sublime-build",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/SublimeREPL-Python.sublime-build",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/xampp/htdocs/mylaravel/database/migrations/2019_02_02_094729_create_articles_table.php",
+		"/C/xampp/htdocs/mylaravel/database/seeds/CategoriesTableSeeder.php",
+		"/E/5112100080/echoclient.py",
+		"/E/5112100080/echoserver.py",
+		"/E/5112100080/chat_client.py",
+		"/E/5112100080/chat_server.py",
+		"/E/5116100030/main.cpp",
+		"/E/5116100030/kuliah/TK B/Kuis2/aco-tsp.py",
+		"/E/5116100030/kuliah/TK B/apaya/test.py",
+		"/E/5116100030/kuliah/TK B/apaya/de_test.py",
+		"/E/5116100030/kuliah/TK B/apaya/ackley.py",
+		"/E/5116100030/kuliah/TK B/apaya/ackley_test.py",
+		"/E/5116100030/kuliah/TK B/UTS/app_org.py",
+		"/E/5116100030/kuliah/TK B/UTS/pso_linearweight.py",
+		"/E/5116100030/kuliah/TK B/UTS/pso.py",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle4.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle5a.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle3.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle2.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/grafkom.txt",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle1.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/particle5b.html",
+		"/C/Users/Honeycomb/Downloads/Tugas 2/Kelompok 7/new/a.py",
+		"/E/5116100030/kuliah/Grafkom/threejs/index.html",
+		"/E/5116100030/kuliah/Grafkom/josdirksen/chapter-01/01-basic-skeleton.html",
+		"/C/Users/Honeycomb/Desktop/grafkom.txt",
+		"/C/xampp/htdocs/mylaravel/resources/views/frontend/layout.blade.php",
+		"/C/xampp/htdocs/mylaravel/resources/views/frontend/put/index.blade.php",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/semangat/client.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/semangat/server.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/semangat/client2.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/semangat/contoh_thread.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/client.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/socketpy/echo-server.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/socketpy/echo-client.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/FreeChat/client.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/FreeChat/server.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/chat_room.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/klien.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/client.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/socket_io/index.html",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/socket_io/index.js",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/test.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/test1.py",
+		"/E/5116100030/kuliah/KIJ/tugas/Chat-with-DES/bisa/server.py",
+		"/E/5116100030/kuliah/KIJ/tugas/DES/tru_des.py",
+		"/C/xampp/htdocs/mylaravel/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/E-Rapat/.env",
+		"/C/xampp/htdocs/E-Rapat/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/xampp/htdocs/E-Rapat/database/migrations/2018_10_23_085845_create_rapat__users_table.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/rapat/search-rapat.blade.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/home.blade.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/rapat/notulensi.blade.php",
+		"/C/xampp/htdocs/E-Rapat/app/Http/Controllers/UserController.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/rapat/buat-rapat.blade.php",
+		"/C/Users/Honeycomb/AppData/Local/Temp/Rar$DIa10016.4100/post.blade.php",
+		"/C/Users/Honeycomb/AppData/Local/Temp/Rar$DIa10016.49315/UserController.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/layouts/js.blade.php",
+		"/C/xampp/htdocs/E-Rapat/resources/views/layouts/css.blade.php",
+		"/C/xampp/htdocs/E-Rapat/app/Http/Controllers/RapatController.php",
+		"/C/xampp/htdocs/E-Rapat/app/User.php",
+		"/C/xampp/htdocs/E-Rapat/routes/web.php",
+		"/C/xampp/htdocs/E-Rapat/.gitignore",
+		"/C/xampp/htdocs/E-Rapat/app/Http/Controllers/AdminController.php",
+		"/E/5116100030/kuliah/Grafkom/threejs/basic_skeleton.html",
+		"/E/5116100030/kuliah/Grafkom/threejs/hello_world.html",
+		"/E/5116100030/kuliah/TK B/matplotting/mat.py",
+		"/E/5116100030/kuliah/TK B/matplotting/animate.py",
+		"/E/5116100030/kuliah/TK B/matplotting/visualize.py",
+		"/E/5116100030/kuliah/TK B/matplotting/sampleText.txt",
+		"/E/5116100030/kuliah/TK B/UTS/PSO_knapsack_sudokod.txt",
+		"/E/5116100030/kuliah/TK B/UTS/PSO_sudokod.txt",
+		"/E/5116100030/kuliah/TK B/UTS/UTS_PSO_TKB_HafidSB.txt",
+		"/E/5116100030/kuliah/TK B/pso.py",
+		"/E/5116100030/kuliah/KIJ/testing.py",
+		"/E/5116100030/des.py",
+		"/E/5116100030/kuliah/TK B/PSO_sudokod.txt",
+		"/E/5116100030/kuliah/TK B/test.py",
+		"/E/5116100030/kuliah/KK/a.py",
+		"/E/5116100030/kuliah/KK/test.py",
+		"/E/5116100030/kuliah/KK/n_network.py",
+		"/E/5116100030/kuliah/KK/haha.py",
+		"/E/5116100030/kuliah/KK/testing.py",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/User/python3.sublime-build",
+		"/C/Users/Honeycomb/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Python3/Default.sublime-commands",
+		"/C/xampp/htdocs/pythonapi/insert.php",
+		"/C/xampp/htdocs/pythonapi/show.php",
+		"/C/xampp/htdocs/pythonapi/delete.php",
+		"/C/xampp/htdocs/pythonapi/conn.php",
+		"/E/5116100030/kuliah/Grafkom/WebGL/ebook/t3_nomor2.html",
+		"/E/5116100030/kuliah/Grafkom/WebGL/ebook/t3_C.js",
+		"/E/5116100030/kuliah/Grafkom/WebGL/ebook/TUGAS3_D.js",
+		"/E/5116100030/kuliah/Grafkom/WebGL/ebook/TUGAS3_D.html",
+		"/E/5116100030/kuliah/Grafkom/WebGL/ebook/t3_nomor3.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"C:/Python27/python.exe"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1022,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "test.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								85,
+								85
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Run with args",
+	"project": "test.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"layout",
+				"resources\\views\\frontend\\layout.blade.php"
+			],
+			[
+				"welcome",
+				"resources\\views\\welcome.blade.php"
+			],
+			[
+				"usercont",
+				"app\\Http\\Controllers\\UserController.php"
+			],
+			[
+				"web.p",
+				"routes\\web.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

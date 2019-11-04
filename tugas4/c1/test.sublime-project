@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "E:\\5116100030\\kuliah\\Sister\\sister-2019"
+		}
+	],
+	"build_systems":
+	[
+	  	{
+		    "name": "Run with args",
+		    "cmd": ["python3", "$file", "server1", "server2"]
+  		}
+	]
+}
