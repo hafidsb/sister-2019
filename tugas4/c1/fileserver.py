@@ -3,7 +3,13 @@ import base64
 
 class FileServer(object):
     def __init__(self):
-        pass
+        self.name = None
+
+    def set_name(self, name):
+        self.name = name
+    
+    def get_name(self):
+        return self.name
 
     def create_return_message(self,kode='000',message='kosong',data=None):
         return dict(kode=kode,message=message,data=data)
