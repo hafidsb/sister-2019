@@ -5,10 +5,11 @@ from fileserver import FileServer
 import Pyro4
 import sys
 
-if len(sys.argv) > 1: 
-    nama_instance = sys.argv[1] 
-else:
-    nama_instance = "fileserver"
+# if len(sys.argv) > 1:
+#     nama_instance = sys.argv[1]
+# else:
+#     nama_instance = "fileserver"
+nama_instance = "fs-1"
 
 def start_with_ns():
     #name server harus di start dulu dengan  pyro4-ns -n localhost -p 7777

@@ -1,9 +1,24 @@
 import os
 import base64
+import Pyro4
 
 class FileServer(object):
     def __init__(self):
         self.name = None
+        self.pyro_servers = dict()
+        self.pyro_list = ["fs-1", "fs-2", "fs-3"]
+
+    def set_pyro_server(self):
+        i = 0
+        for x in self.pyro_list:
+            if self.name == x:
+                pass
+            else:
+                self.pyro_servers[i] = Pyro4.Proxy("PYRONAME:{}@localhost:7777" . format(x))
+            i = i + 1
+
+    def get_pyro_server(self):
+        print(self.pyro_servers)
 
     def set_name(self, name):
         self.name = name

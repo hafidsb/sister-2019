@@ -12,6 +12,7 @@ def get_fileserver_object():
     uri = "PYRONAME:{}@localhost:7777" . format(nama_instance)
     fserver = Pyro4.Proxy(uri)
     fserver.set_name(nama_instance)
+    fserver.set_pyro_server()
     return fserver
 
 if __name__=='__main__':
@@ -40,10 +41,12 @@ if __name__=='__main__':
 
         if split[0] == "list":
             print(s.list())
-        if split[0] == "exit":
+        elif split[0] == "pyro":
+            s.get_pyro_server()
+        elif split[0] == "exit":
             print("disconnected from server")
             print(s.get_name())
-            connected = False
+            # connected = False
         elif len(split) == 2:            
             if split[0] == "create":
                 print(s.create(split[1]))

@@ -9,7 +9,7 @@ import sys
 #     nama_instance = sys.argv[1]
 # else:
 #     nama_instance = "fileserver"
-nama_instance = "fs-2"
+nama_instance = "fs-3"
 
 def start_without_ns():
     daemon = Pyro4.Daemon()
