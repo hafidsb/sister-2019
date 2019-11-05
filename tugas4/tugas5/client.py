@@ -12,7 +12,7 @@ def get_fileserver_object():
     uri = "PYRONAME:{}@localhost:7777" . format(nama_instance)
     fserver = Pyro4.Proxy(uri)
     fserver.set_name(nama_instance)
-    fserver.set_pyro_server()
+    fserver.set_pyro_object()
     return fserver
 
 if __name__=='__main__':
@@ -40,25 +40,24 @@ if __name__=='__main__':
         split = client_input.split(" ")
 
         if split[0] == "list":
-            print(s.list())
-        elif split[0] == "pyro":
-            s.get_pyro_server()
+            print(s.get_list())
+        # elif split[0] == "pyro":
+        #     s.get_pyro_objects()
         elif split[0] == "exit":
             print("disconnected from server")
-            print(s.get_name())
-            # connected = False
+            connected = False
         elif len(split) == 2:            
             if split[0] == "create":
-                print(s.create(split[1]))
+                print(s.create(split[1], nama_instance))
             elif split[0] == "read":
                 print(s.read(split[1]))
             elif split[0] == "delete":
-                print(s.delete(split[1]))
+                print(s.delete(split[1], nama_instance))
             else:
                 print("command is not found.")
         elif len(split) > 2:
             if split[0] == "update":
-                print(s.update(split[1], split[2]))
+                print(s.update(split[1], ' '.join(split[2:]), nama_instance))
             else:
                 print("command is not found")
         else:

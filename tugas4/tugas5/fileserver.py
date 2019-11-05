@@ -5,20 +5,21 @@ import Pyro4
 class FileServer(object):
     def __init__(self):
         self.name = None
-        self.pyro_servers = dict()
-        self.pyro_list = ["fs-1", "fs-2", "fs-3"]
+        self.pyro_objects = dict()
+        self.pyro_name_list = ["fs-1", "fs-2", "fs-3"]
 
-    def set_pyro_server(self):
+    def set_pyro_object(self):
         i = 0
-        for x in self.pyro_list:
+        for x in self.pyro_name_list:
             if self.name == x:
                 pass
             else:
-                self.pyro_servers[i] = Pyro4.Proxy("PYRONAME:{}@localhost:7777" . format(x))
+                self.pyro_objects[i] = Pyro4.Proxy("PYRONAME:{}@localhost:7777" . format(x))
+                self.pyro_objects[i].set_name(x)
                 i = i + 1
 
-    def get_pyro_server(self):
-        print(self.pyro_servers)
+    def get_pyro_objects(self):
+        print(self.pyro_objects)
 
     def set_name(self, name):
         self.name = name
@@ -29,8 +30,8 @@ class FileServer(object):
     def create_return_message(self,kode='000',message='kosong',data=None):
         return dict(kode=kode,message=message,data=data)
 
-    def list(self):
-        print("LIST ops")
+    def get_list(self):
+        print("{}: LIST ops".format(self.name))
         try:
             daftarfile = []
             for x in os.listdir():
@@ -40,14 +41,18 @@ class FileServer(object):
         except:
             return self.create_return_message('500','Error')
 
-    def create(self, name='filename000'):
-        for x in range(0, len(self.pyro_servers)):
-            self.pyro_servers[x].create(name)
+    def create(self, name='filename000', caller='none'):
+        if caller == 'none':
+            return self.create_return_message('400', 'OK', 'Bad Request Error')
+
+        if self.name == caller:
+            for x in range(0, len(self.pyro_objects)):
+                self.pyro_objects[x].create(name, self.name)
 
         nama='FFF-{}' . format(name)
-        print("CREATE ops {}" . format(nama))
+        print("{}: CREATE ops {} FROM {} instance" . format(self.name, nama, caller))
         try:
-            if os.path.exists(name):
+            if os.path.exists(nama):
                 return self.create_return_message('102', 'OK','File Exists')
             f = open(nama,'wb',buffering=0)
             f.close()
@@ -59,6 +64,8 @@ class FileServer(object):
         nama='FFF-{}' . format(name)
         print("READ ops {}" . format(nama))
         try:
+            if not os.path.exists(nama):
+                return self.create_return_message('404', 'OK','File Not Found')
             f = open(nama,'r+b')
             contents = f.read().decode()
             f.close()
@@ -66,16 +73,22 @@ class FileServer(object):
         except:
             return self.create_return_message('500','Error')
             
-    def update(self,name='filename000',content=''):
-        for x in range(0, len(self.pyro_servers)):
-            self.pyro_servers[x].update(name, content)
+    def update(self,name='filename000',content='', caller='none'):
+        if caller == 'none':
+            return self.create_return_message('400', 'OK', 'Bad Request Error')
+
+        if self.name == caller: 
+            for x in range(0, len(self.pyro_objects)):
+                self.pyro_objects[x].update(name, content, self.name)
 
         nama='FFF-{}' . format(name)
-        print("UPDATE ops {}" . format(nama))
+        print("{}: UPDATE ops {} FROM {} instance" . format(self.name, nama, caller))
 
         if (str(type(content))=="<class 'dict'>"):
             content = content['data']
         try:
+            if not os.path.exists(nama):
+                return self.create_return_message('404', 'OK','File Not Found')
             f = open(nama,'w+b')
             f.write(content.encode())
             f.close()
@@ -83,14 +96,20 @@ class FileServer(object):
         except Exception as e:
             return self.create_return_message('500','Error',str(e))
 
-    def delete(self,name='filename000'):
-        for x in range(0, len(self.pyro_servers)):
-            self.pyro_servers[x].delete(name)
+    def delete(self, name='filename000', caller='none'):
+        if caller == 'none':
+            return self.create_return_message('400', 'OK', 'Bad Request Error')
+        
+        if self.name == caller:
+            for x in range(0, len(self.pyro_objects)):
+                self.pyro_objects[x].delete(name, caller)
 
         nama='FFF-{}' . format(name)
-        print("DELETE ops {}" . format(nama))
+        print("{}: DELETE ops {} FROM {} instance" . format(self.name, nama, caller))
 
         try:
+            if not os.path.exists(nama):
+                return self.create_return_message('404', 'OK','File Not Found')
             os.remove(nama)
             return self.create_return_message('101','OK')
         except:
@@ -106,6 +125,6 @@ if __name__ == '__main__':
 #    print(k.create('f2'))
 #    print(k.update('f2',content='wedusmu'))
 #    print(k.read('f2'))
-    print(k.list())
+    print(k.get_list())
     #print(k.delete('f1'))
 
