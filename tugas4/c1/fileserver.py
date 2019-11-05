@@ -15,7 +15,7 @@ class FileServer(object):
                 pass
             else:
                 self.pyro_servers[i] = Pyro4.Proxy("PYRONAME:{}@localhost:7777" . format(x))
-            i = i + 1
+                i = i + 1
 
     def get_pyro_server(self):
         print(self.pyro_servers)
@@ -41,6 +41,9 @@ class FileServer(object):
             return self.create_return_message('500','Error')
 
     def create(self, name='filename000'):
+        for x in range(0, len(self.pyro_servers)):
+            self.pyro_servers[x].create(name)
+
         nama='FFF-{}' . format(name)
         print("CREATE ops {}" . format(nama))
         try:
@@ -64,6 +67,9 @@ class FileServer(object):
             return self.create_return_message('500','Error')
             
     def update(self,name='filename000',content=''):
+        for x in range(0, len(self.pyro_servers)):
+            self.pyro_servers[x].update(name, content)
+
         nama='FFF-{}' . format(name)
         print("UPDATE ops {}" . format(nama))
 
@@ -78,6 +84,9 @@ class FileServer(object):
             return self.create_return_message('500','Error',str(e))
 
     def delete(self,name='filename000'):
+        for x in range(0, len(self.pyro_servers)):
+            self.pyro_servers[x].delete(name)
+
         nama='FFF-{}' . format(name)
         print("DELETE ops {}" . format(nama))
 
