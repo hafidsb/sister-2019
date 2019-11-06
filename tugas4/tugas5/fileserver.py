@@ -62,7 +62,7 @@ class FileServer(object):
 
     def read(self,name='filename000'):
         nama='FFF-{}' . format(name)
-        print("READ ops {}" . format(nama))
+        print("{}: READ ops {}" . format(self.name, nama))
         try:
             if not os.path.exists(nama):
                 return self.create_return_message('404', 'OK','File Not Found')
